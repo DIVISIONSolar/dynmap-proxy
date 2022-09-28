@@ -1,4 +1,4 @@
-echo "What is the (sub)domain name you want to use for Dynmap? (Eg. map.yoursite.com)"                                                                                                                   
+echo "What is the domain name you want to use for Dynmap? (Eg. map.yoursite.com)"                                                                                                                   
 read ccdomain                                                                                                                                                     
                                                                                                                                                                   
 echo "What is the IP address of your Minecraft server and the port Dynmap is running on (Eg. 192.168.1.101:8192)"                                                                                   
@@ -17,4 +17,4 @@ echo " server {
                                                                                                                                                                   
 ln -s /etc/nginx/sites-available/$ccdomain.conf /etc/nginx/sites-enabled/$ccdomain.conf                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-echo "Your Dynmap reverse proxy is now setup and should be available at https://$ccdomain" 
+echo "Your Dynmap is now setup and should be available at https://$ccdomain" 
