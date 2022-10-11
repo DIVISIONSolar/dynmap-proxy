@@ -1,15 +1,13 @@
-echo "What is the domain name you want to use for Dynmap? (Eg. map.yoursite.com)"                                                                                                                   
+echo "What domain do you want for your dynmap? (Ex. map.yourserver.xyz)"                                                                                                                   
 read ccdomain                                                                                                                                                     
                                                                                                                                                                   
-echo "What is the IP address of your Minecraft server and the port Dynmap is running on (Eg. 192.168.1.101:8192)"                                                                                   
+echo "What is the IP and PORT of your dynmap? (Ex. 1234:5678)"                                                                                   
 read ccip                                                                                                                                                         
                                                                                                                                                                   
 echo " server {                                                                                                                                                   
         server_name $ccdomain;                                                                                                                                    
         listen 80;                                                                                                                                                
-        listen [::]:80;                                                                                                                                           
-        access_log /var/log/nginx/reverse-access.log;                                                                                                             
-        error_log /var/log/nginx/reverse-error.log;                                                                                                               
+        listen [::]:80;                                                                                                               
         location / {                                                                                                                                              
                     proxy_pass http://$ccip;                                                                                                                      
   }                                                                                                                                                               
